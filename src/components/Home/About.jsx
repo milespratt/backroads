@@ -1,8 +1,10 @@
 import React from "react"
 import Title from "../Title"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import styles from "../../css/about.module.css"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 const getImage = graphql`
   query aboutImage {
@@ -37,9 +39,9 @@ export default function About() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quis
             ut ex.
           </p>
-          <Link to="/tours" className="btn-primary">
+          <AniLink fade to="/tours" className="btn-primary">
             read more
-          </Link>
+          </AniLink>
         </article>
       </div>
     </section>

@@ -9,8 +9,8 @@ export default function error() {
     <Layout>
       <header className={styles.error}>
         <Banner title="Looks like you're lost">
-          <AniLink fade className="btn-white" to="/">
-            GO home
+          <AniLink paintDrip className="btn-white" to="/">
+            Go home
           </AniLink>
         </Banner>
       </header>
