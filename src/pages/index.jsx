@@ -11,7 +11,7 @@ export default () => (
   <Layout>
     <SimpleHero>
       <Banner
-        title="Backroads"
+        title="Smells"
         info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, veniam eligendi! Nam."
       >
         <Link to="/tours" className="btn-white">
