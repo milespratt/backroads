@@ -1,16 +1,30 @@
 import React from "react"
 import Title from "../Title"
 import styles from "../../css/about.module.css"
-import img from "../../images/defaultBcg.jpeg"
+import Img from "gatsby-image"
+import { graphql, useStaticQuery, Link } from "gatsby"
+
+const getImage = graphql`
+  query aboutImage {
+    aboutImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 export default function About() {
+  const data = useStaticQuery(getImage)
   return (
     <section className={styles.about}>
       <Title big title="about" subtitle="us" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            <img src={img} alt="" />
+            <Img fluid={data.aboutImage.childImageSharp.fluid} />
           </div>
         </article>
         <article className={styles.aboutInfo}>
@@ -23,9 +37,9 @@ export default function About() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quis
             ut ex.
           </p>
-          <button type="button" className="btn-primary">
+          <Link to="/tours" className="btn-primary">
             read more
-          </button>
+          </Link>
         </article>
       </div>
     </section>
