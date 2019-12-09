@@ -28,7 +28,7 @@ export default function Tours() {
   const { tours } = useStaticQuery(getTours)
   return (
     <div>
-      tours <TourList tours={tours} />
+      <TourList tours={tours} />
     </div>
   )
 }
