@@ -17,6 +17,16 @@
   font-size: 1.5rem;
 }
 
+.logo1,
+.logo2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.logo2 {
+  color: var(--primaryColor);
+}
+
 .nav-links {
   list-style-type: none;
   transition: var(--mainTransition);

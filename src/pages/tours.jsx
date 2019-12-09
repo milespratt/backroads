@@ -14,7 +14,7 @@ export default function tours({ data }) {
 
 export const query = graphql`
   query {
-    tourBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    tourBcg: file(relativePath: { eq: "grand_tour.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_tracedSVG

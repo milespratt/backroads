@@ -32,8 +32,8 @@ export default function Footer() {
         })}
       </div>
       <div className={styles.copyright}>
-        copyright &copy; hummingbird hill LLC {new Date().getFullYear()} all
-        rights reserved
+        copyright &copy; Solus Travel {new Date().getFullYear()} all rights
+        reserved
       </div>
     </footer>
   )

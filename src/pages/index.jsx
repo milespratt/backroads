@@ -13,7 +13,7 @@ export default ({ data }) => (
   <Layout>
     <StyledHero img={data.defaultBcg.childImageSharp.fluid} home="true">
       <Banner
-        title="Backroads"
+        title="Solus Travel"
         info="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, veniam eligendi! Nam."
       >
         <AniLink fade to="/tours" className="btn-white">
@@ -29,7 +29,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    defaultBcg: file(relativePath: { eq: "grand_tour.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_tracedSVG
